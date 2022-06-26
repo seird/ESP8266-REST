@@ -7,6 +7,7 @@
 
 void get_pin(uint8_t id);
 void post_pin(uint8_t id);
+void post_pin_toggle(uint8_t id);
 
 void get_pin_mode(uint8_t id);
 void post_pin_mode(uint8_t id);

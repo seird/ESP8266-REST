@@ -51,6 +51,18 @@ server_config_routing() {
     server.on("/pin/D9",  HTTP_POST, [](){post_pin(D9);});
     server.on("/pin/D10", HTTP_POST, [](){post_pin(D10);});
 
+    server.on("/pin/D0/toggle",  HTTP_POST, [](){post_pin_toggle(D0);});
+    server.on("/pin/D1/toggle",  HTTP_POST, [](){post_pin_toggle(D1);});
+    server.on("/pin/D2/toggle",  HTTP_POST, [](){post_pin_toggle(D2);});
+    server.on("/pin/D3/toggle",  HTTP_POST, [](){post_pin_toggle(D3);});
+    server.on("/pin/D4/toggle",  HTTP_POST, [](){post_pin_toggle(D4);});
+    server.on("/pin/D5/toggle",  HTTP_POST, [](){post_pin_toggle(D5);});
+    server.on("/pin/D6/toggle",  HTTP_POST, [](){post_pin_toggle(D6);});
+    server.on("/pin/D7/toggle",  HTTP_POST, [](){post_pin_toggle(D7);});
+    server.on("/pin/D8/toggle",  HTTP_POST, [](){post_pin_toggle(D8);});
+    server.on("/pin/D9/toggle",  HTTP_POST, [](){post_pin_toggle(D9);});
+    server.on("/pin/D10/toggle", HTTP_POST, [](){post_pin_toggle(D10);});
+
     server.on("/pin/D0/mode",  HTTP_GET, [](){get_pin_mode(D0);});
     server.on("/pin/D1/mode",  HTTP_GET, [](){get_pin_mode(D1);});
     server.on("/pin/D2/mode",  HTTP_GET, [](){get_pin_mode(D2);});

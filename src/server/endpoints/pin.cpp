@@ -69,6 +69,25 @@ post_pin(uint8_t id)
 
 
 void
+post_pin_toggle(uint8_t id)
+{
+    if (!server_authenticated()) {
+        return;
+    }
+
+    if (pin_read_mode(id) != OUTPUT) {
+        // can only write a value to OUTPUT pins
+        server.send(400);
+        return;
+    }
+
+    digitalWrite(id, !digitalRead(id));
+
+    server.send(202);
+}
+
+
+void
 get_pin_mode(uint8_t id)
 {
     StaticJsonDocument<200> jsonDocument;
