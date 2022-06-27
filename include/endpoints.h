@@ -14,5 +14,6 @@ void post_pin_mode(uint8_t id);
 
 void get_root();
 
+void get_uptime();
 
 #endif // __ENDPOINTS_H__

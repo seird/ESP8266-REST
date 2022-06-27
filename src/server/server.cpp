@@ -27,6 +27,8 @@ void
 server_config_routing() {
     server.on("/", HTTP_GET, get_root);
 
+    server.on("/uptime", HTTP_GET, get_uptime);
+
     server.on("/pin/D0",  HTTP_GET, [](){get_pin(D0);});
     server.on("/pin/D1",  HTTP_GET, [](){get_pin(D1);});
     server.on("/pin/D2",  HTTP_GET, [](){get_pin(D2);});

@@ -40,6 +40,12 @@ curl -X 'GET' 'http://{ESP_IP}/pin/D0'
 curl -X 'POST' 'http://{ESP_IP}/pin/D0' -d '{"value": 1, "duration": 1000}'
 ```
 
+## Toggle the value of D0
+
+```bash
+curl -X 'POST' 'http://{ESP_IP}/pin/D0/toggle''
+```
+
 ## Read the mode of pin D0
 
 ```bash
@@ -56,4 +62,16 @@ curl -X 'GET' 'http://{ESP_IP}/pin/D0/mode'
 
 ```bash
 curl -X 'POST' 'http://{ESP_IP}/pin/D0/mode' -d '{"mode": 0}'
+```
+
+## Get the server uptime in seconds
+
+```bash
+curl -X 'GET' 'http://{ESP_IP}/uptime'
+```
+
+```json
+{
+  "uptime": 113
+}
 ```
